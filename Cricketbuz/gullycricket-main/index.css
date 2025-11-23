@@ -1,0 +1,154 @@
+
+/* home page */
+
+body{
+    background-color: #FBF8EF;
+    margin:0px;
+    padding:0px;
+}
+header{
+    background-color: #80CBC4;
+    padding:1em;
+    margin:1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+header a{
+
+    text-decoration: none;
+}
+.features{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.feature{
+    width:280px;
+    height:200px;
+    border-radius: 10px;
+    padding:1em;
+    text-align: center;
+    font-size: larger;
+
+}
+.feature img{
+    position:relative;
+    height: 100%;
+    width:100%;
+    object-fit: contain;
+
+}
+
+@media (max-width:768px){
+    .features{
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* toss */
+button{
+    background-color: #FFB433;
+    border: none;
+    padding:1em 3em;
+    border-radius: 10px;
+    transition: border-radius 0.5s ease;
+    
+}
+button:hover{
+    border-radius: 25px;
+
+}
+.toss-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin{
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+    margin-top:15px;
+    margin-bottom:10px;
+    box-shadow: 5px 5px 50px rgb(72, 71, 71);
+    position: relative;
+    transform-style: preserve-3d;
+    transition:transform 5s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor:pointer;
+}
+
+
+.heads,.tails{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+.heads img,.tails img{
+    height: 100%;
+    width:100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.heads{
+    background-color: #123458;
+}
+.tails{
+    transform:rotateY(180deg);
+    background-color:rgb(151, 130, 7);
+}
+
+/* batting order */
+input{
+    padding:10px;
+    border:solid #FFB433;;
+    border-radius:10px;
+    
+}
+
+.batting-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4px;
+}
+
+#batting-order{
+    margin-top:6px;
+    display: flex;
+   flex-wrap: wrap;
+    gap:8px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bat-grid{
+    background-color: #FF0066;
+    width:150px;
+    height:50px;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bat-grid-selected{
+    background-color:#FFB433;
+    visibility:visible;
+}
+
+.hide-text{
+    visibility:hidden;
+}
